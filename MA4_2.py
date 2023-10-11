@@ -26,7 +26,7 @@ def fib_numba(n):
     else:
         return fib_numba(n-1) + fib_numba(n-2)
 
-def comp(q,w,f):
+def comp(q,w):
     x = 0
     x = range(q,w+1)
     y_c = []
