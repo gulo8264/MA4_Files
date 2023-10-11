@@ -29,8 +29,8 @@ def fib_numba(n):
 def graph(q,w):
     
     x = range(q,w)
-    y_cpp = []
-    y_numba = []
+    y_c = []
+    y_n = []
     y_py = []
 
     for i in x:
@@ -44,19 +44,19 @@ def graph(q,w):
         fib_py(i)
         t4 = pc()
 
-        y_cpp.append(t2-t1)
-        y_numba.append(t3-t2)
+        y_c.append(t2-t1)
+        y_n.append(t3-t2)
         y_py.append(t4-t3)
 
-    plt.plot(x ,y_cpp, "r", label="C++")
-    plt.plot(x, y_numba, "g", label="Numba")
+    plt.plot(x ,y_c, "y", label="C++")
+    plt.plot(x, y_n, "g", label="Numba")
     plt.plot(x, y_py, "b", label="py")
 
     plt.yscale('log')
     plt.xlabel('n')
     plt.ylabel('Time (s)')
-    plt.title('r = C++, g = Numba, b = Py')
-    plt.savefig(str(q) + "to" + str(w) + 'logFib_TimeComparison.png')
+    plt.title('time comparison')
+    plt.savefig(str(q) + "to" + str(w) + '.png')
 
 def time47():
     x = 47
@@ -72,10 +72,13 @@ def time47():
     print(f'Numba: {round(t3-t2,4)}')
 
 def main():
+    print('Phase 1')
     graph(20,30)
+    print('Phase 2')
     time47()
+    print('Phase 3')
     graph(30,45)
-    print(fib_py(6))
+    print('Done')
     
 
 if __name__ == '__main__':
