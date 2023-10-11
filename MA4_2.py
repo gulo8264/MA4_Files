@@ -59,7 +59,7 @@ def graph(q,w):
     plt.savefig(str(q) + "to" + str(w) + 'logFib_TimeComparison.png')
 
 def time47():
-    x = 47
+    x = 48
 
     t1 = pc()
     f = Person(x)
