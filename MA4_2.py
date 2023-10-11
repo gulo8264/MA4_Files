@@ -50,7 +50,7 @@ def comp(q,w,f):
     plt.plot(x, y_n, "g", label="Numba")
     plt.plot(x, y_py, "b", label="py")
     #plt.yscale('log')
-    plt.label('n')
+    plt.xlabel('n')
     plt.ylabel('Time (s)')
     plt.title('time comparison')
     plt.savefig(str(q) + "to" + str(w) + '.png')
