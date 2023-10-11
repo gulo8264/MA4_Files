@@ -13,8 +13,6 @@ import concurrent.futures as future
 from time import perf_counter as pc
 
 
-#git upload test
-
 def piApp(n):
 
     nC = 0
