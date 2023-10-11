@@ -34,7 +34,7 @@ def graph(q,w):
     y_py = []
 
     for i in x:
-        print(x)
+        print(i)
         t1 = pc()
         f = Person(i)
         f.fib()
@@ -57,14 +57,12 @@ def graph(q,w):
 
 def time47():
     x = 47
-
     t1 = pc()
     f = Person(x)
     print(f'C++: {f.fib()}')
     t2 = pc()
     print(f'numba: {fib_numba(x)}')
     t3 = pc()
-
     print(f'C++: {round(t2-t1,4)}')
     print(f'Numba: {round(t3-t2,4)}')
 
