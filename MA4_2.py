@@ -27,7 +27,7 @@ def fib_numba(n):
         return fib_numba(n-1) + fib_numba(n-2)
 
 def comp(q,w,f):
-    
+    x = 0
     x = range(q,w+1)
     y_c = []
     y_n = []
@@ -46,15 +46,14 @@ def comp(q,w,f):
         y_c.append(t2-t1)
         y_n.append(t3-t2)
         y_py.append(t4-t3)
-    fig, plot=plt.subplots(1)
-    plot.plot(x ,y_c, "y", label="C++")
-    plot.plot(x, y_n, "g", label="Numba")
-    plot.plot(x, y_py, "b", label="py")
+    plt.plot(x ,y_c, "y", label="C++")
+    plt.plot(x, y_n, "g", label="Numba")
+    plt.plot(x, y_py, "b", label="py")
     #plt.yscale('log')
-    plot.xlabel('n')
-    plot.ylabel('Time (s)')
-    plot.title('time comparison')
-    fig.savefig(str(q) + "to" + str(w) + '.png')
+    plt.label('n')
+    plt.ylabel('Time (s)')
+    plt.title('time comparison')
+    plt.savefig(str(q) + "to" + str(w) + '.png')
 
 def time47():
     x = 47
@@ -68,11 +67,11 @@ def time47():
     print(f'Numba: {round(t3-t2,4)}')
 
 def main():
-    comp(20,30,1)
+    comp(20,25,1)
     print('Phase 1')
     time47()
     print('Phase 2')
-    comp(30,45,2)
+    comp(30,35,2)
     print('Done')
     
 
