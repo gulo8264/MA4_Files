@@ -49,11 +49,11 @@ def comp(q,w):
     plt.plot(x ,y_c, "y", label="C++")
     plt.plot(x, y_n, "g", label="Numba")
     plt.plot(x, y_py, "b", label="py")
-    #plt.yscale('log')
+    plt.yscale('log')
     plt.xlabel('n')
     plt.ylabel('Time (s)')
     plt.title('time comparison')
-    plt.savefig(str(q) + "to" + str(w) + '.png')
+    plt.savefig(str(q) + "to" + str(w) + 'log.png')
 
 def time47():
     x = 47
