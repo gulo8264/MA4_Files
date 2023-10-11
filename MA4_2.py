@@ -46,7 +46,7 @@ def comp(q,w,f):
         y_c.append(t2-t1)
         y_n.append(t3-t2)
         y_py.append(t4-t3)
-    fig, plot=plt.subplots(f)
+    fig, plot=plt.subplots(1)
     plot.plot(x ,y_c, "y", label="C++")
     plot.plot(x, y_n, "g", label="Numba")
     plot.plot(x, y_py, "b", label="py")
@@ -68,11 +68,11 @@ def time47():
     print(f'Numba: {round(t3-t2,4)}')
 
 def main():
-    comp(20,25,1)
+    comp(20,30,1)
     print('Phase 1')
     time47()
     print('Phase 2')
-    comp(30,35,2)
+    comp(30,45,2)
     print('Done')
     
 
