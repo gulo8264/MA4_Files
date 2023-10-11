@@ -67,12 +67,12 @@ def time47():
     print(f'Numba: {round(t3-t2,4)}')
 
 def main():
-    comp(20,25,1)
-    print('Phase 1')
+    main_start = pc()
     time47()
-    print('Phase 2')
-    comp(30,35,2)
+    comp(20,30)
+    main_end = pc()
     print('Done')
+    print(str(main_end-main_start)+"s")
     
 
 if __name__ == '__main__':
