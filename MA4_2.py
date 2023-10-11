@@ -6,7 +6,10 @@ Reviewed by:
 Date reviewed:
 """
 
-from person import Person
+try: 
+    from person import Person
+except:
+    pass
 import matplotlib.pyplot as plt
 from time import perf_counter as pc
 
@@ -72,9 +75,10 @@ def time47():
     print(f'Numba: {round(t3-t2,4)}')
 
 def main():
-    graph(20,30)
+    """graph(20,30)
     time47()
-    graph(30,45)
+    graph(30,45)"""
+    print(fib_py(6))
     
 
 if __name__ == '__main__':
