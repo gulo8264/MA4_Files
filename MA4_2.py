@@ -68,8 +68,8 @@ def time47():
 
 def main():
     main_start = pc()
-    time47()
-    comp(30,45)
+    #time47()
+    comp(20,25)
     main_end = pc()
     print('Done')
     print(str(main_end-main_start)+"s")
