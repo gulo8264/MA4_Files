@@ -28,7 +28,7 @@ def fib_numba(n):
 
 def comp(q,w,f):
     
-    x = range(q,w)+1
+    x = range(q,w+1)
     y_c = []
     y_n = []
     y_py = []
