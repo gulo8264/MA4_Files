@@ -34,7 +34,7 @@ def graph(q,w):
     y_py = []
 
     for i in x:
-        
+        print(x)
         t1 = pc()
         f = Person(i)
         f.fib()
@@ -43,20 +43,17 @@ def graph(q,w):
         t3 = pc()
         fib_py(i)
         t4 = pc()
-
         y_c.append(t2-t1)
         y_n.append(t3-t2)
         y_py.append(t4-t3)
-
     plt.plot(x ,y_c, "y", label="C++")
     plt.plot(x, y_n, "g", label="Numba")
     plt.plot(x, y_py, "b", label="py")
-
-    plt.yscale('log')
+    #plt.yscale('log')
     plt.xlabel('n')
     plt.ylabel('Time (s)')
     plt.title('time comparison')
-    plt.savefig(str(q) + "to" + str(w) + '.png')
+    plt.savefig(str(q) + "to" + str(w) + '_2.png')
 
 def time47():
     x = 47
@@ -72,11 +69,10 @@ def time47():
     print(f'Numba: {round(t3-t2,4)}')
 
 def main():
-    print('Phase 1')
     graph(20,30)
-    print('Phase 2')
+    print('Phase 1')
     time47()
-    print('Phase 3')
+    print('Phase 2')
     graph(30,45)
     print('Done')
     
