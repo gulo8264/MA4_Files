@@ -2,8 +2,8 @@
 
 Student: Gustaf Lofdahl
 Mail: gustaf.lofdahl.8462@student.uu.se
-Reviewed by:
-Date reviewed:
+Reviewed by: Ema Duljkovic
+Date reviewed: 12/10 -23
 """
 
 import random
