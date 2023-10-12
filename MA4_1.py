@@ -55,7 +55,6 @@ def MonteCarlo(n, d):
 def MultiMonteCarlo(n, d, p):
     n = [int(n/p)]*p
     d = [d]*p
-    #args = [int(n/10), d]*10
     with future.ProcessPoolExecutor() as ex:
         result = ex.map(MonteCarlo, n, d)
     result = sum(result)/p
